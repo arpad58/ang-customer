@@ -15,14 +15,12 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td scope="row"></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td scope="row"></td>
-            <td></td>
+          <tr *ngFor="let customer of customerList$ | async">
+            <td>{{customer.id}}</td>
+            <td>{{customer.name}}</td>
+            <td>{{customer.email}}</td>
+            <td>{{customer.rating}}</td>
+            <td>{{customer.address}}</td>
             <td></td>
           </tr>
         </tbody>
