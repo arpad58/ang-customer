@@ -1,4 +1,4 @@
-<p>customer-list works!</p>
+
 
 <div class="container">
   <div class="row">
@@ -21,7 +21,11 @@
             <td>{{customer.email}}</td>
             <td>{{customer.rating}}</td>
             <td>{{customer.address}}</td>
-            <td></td>
+            <td>
+              <button (click)="onDelete(customer)"  class="btn btn-danger">
+                <i class="fa fa-trash"></i>
+              </button>
+            </td>
           </tr>
         </tbody>
       </table>
