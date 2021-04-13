@@ -20,5 +20,13 @@ export class CustomerService {
     return this.http.delete<Customer>(`${this.serverAddress}/${customer.id}`);
   }
 
+  get(id: number): Observable<Customer> {
+    return this.http.get<Customer>(`${this.serverAddress}/${id}`);
+  }
+
+  createCustomer(customer: Customer): Observable<Customer> {
+    return this.http.post<Customer>(`${this.serverAddress}`, customer);
+  }
+
 
 }
