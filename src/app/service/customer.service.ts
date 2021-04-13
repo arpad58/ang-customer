@@ -28,5 +28,7 @@ export class CustomerService {
     return this.http.post<Customer>(`${this.serverAddress}`, customer);
   }
 
-
+  updateCustomer(customer: Customer): Observable<Customer> {
+    return this.http.patch<Customer>(`${this.serverAddress}/${customer.id}`, customer);
+  }
 }

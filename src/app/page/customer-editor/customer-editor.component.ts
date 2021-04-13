@@ -25,8 +25,6 @@ export class CustomerEditorComponent implements OnInit {
   onCreate(customer: Customer): void {
     this.customerService.createCustomer(customer).subscribe(
       () => this.router.navigate(['/'])
-
-                                 /* oldal frissitese */
     );
   }
 
